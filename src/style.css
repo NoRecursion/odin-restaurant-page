@@ -47,3 +47,18 @@ isolation: isolate;
 }
 
 /* -------------------------------- Code --------------------------------- */
+
+header{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+nav{
+    background-color: blue;
+    width: 30%;
+    display:flex;
+    justify-content: space-around;
+}
+button{
+
+}
