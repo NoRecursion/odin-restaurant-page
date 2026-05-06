@@ -62,3 +62,19 @@ nav{
 button{
 
 }
+
+.greet{
+    color: aqua;
+}
+
+.name{
+    color: blue;
+}
+
+.menu-item{
+    border: 5px black solid;
+
+    img{
+        height: 200px;
+    }
+}

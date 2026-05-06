@@ -14,11 +14,21 @@ function init(){
     const btnAbout = document.querySelector("#btn-about");
     const canvas = document.querySelector("#content");
 
-    btnHome.addEventListener("click",(e)=>{loadHome(canvas)});
-    btnMenu.addEventListener("click",(e)=>{loadMenu(canvas)});
-    btnAbout.addEventListener("click",(e)=>{loadAbout(canvas)});
+    btnHome.addEventListener("click",(e)=>{
+        canvas.replaceChildren();
+        loadHome(canvas);
+    });
+    btnMenu.addEventListener("click",(e)=>{
+        canvas.replaceChildren();
+        loadMenu(canvas);
+    });
+    btnAbout.addEventListener("click",(e)=>{
+        canvas.replaceChildren();
+        loadAbout(canvas);
+    });
 
     loadHome(canvas);
 }
 
 init();
+
