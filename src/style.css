@@ -63,18 +63,52 @@ button{
 
 }
 
-.greet{
-    color: aqua;
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.name{
-    color: blue;
+#content{
+    background-color: beige;
+    flex: 1 1 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.menu-item{
-    border: 5px black solid;
+.js-tab{
+    align-self: center;
+}
 
-    img{
-        height: 200px;
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    .greet{
+        color: rgb(255, 0, 0);
+    }
+    
+    .name{
+        color: blue;
     }
 }
+
+.menu-container{
+
+    .menu-item{
+        border: 5px black solid;
+    
+        img{
+            height: 200px;
+        }
+    }
+}
+
+.about-container{
+    
+}
+
+

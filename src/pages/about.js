@@ -1,3 +1,4 @@
+
 function bel(type, cls, text){ //make a basic dom element
     const el = document.createElement(type);
     if(cls){el.classList.add(cls);}
@@ -18,8 +19,13 @@ const ellist = [
 
 ]
 
+const about_container = document.createElement("div");
+about_container.classList.add("about-container");
+about_container.classList.add("js-tab");
+about_container.replaceChildren(...ellist);
+
 function load(canvas){
-    canvas.replaceChildren(...ellist);
+    canvas.replaceChildren(about_container);
 }
 
 
