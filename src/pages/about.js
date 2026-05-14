@@ -1,3 +1,4 @@
+import store_front from "./images/store_front.jpg"
 
 function bel(type, cls, text){ //make a basic dom element
     const el = document.createElement(type);
@@ -15,14 +16,21 @@ const ellist = [
     bel("p","","Contact"),
     bel("p","","456 678 9012"),
     bel("p","","info@dorsia.com"),
-
+    bel("p","","Images from nano banana"),
 
 ]
+
+const info = document.createElement("div");
+info.replaceChildren(...ellist);
+
+
+const store_img = document.createElement("img");
+store_img.src = store_front;
 
 const about_container = document.createElement("div");
 about_container.classList.add("about-container");
 about_container.classList.add("js-tab");
-about_container.replaceChildren(...ellist);
+about_container.replaceChildren(store_img,info);
 
 function load(canvas){
     canvas.replaceChildren(about_container);

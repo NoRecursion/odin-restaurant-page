@@ -48,6 +48,12 @@ isolation: isolate;
 
 /* -------------------------------- Code --------------------------------- */
 
+:root{
+    --white-green:#f4f9f2;
+    --light-green:#bde5ba;
+    --hard-green:#3a7b2e;
+}
+
 header{
     background-color: red;
     display: flex;
@@ -86,29 +92,99 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:center ;
-    align-items: center;
+    align-items: end;
+
+    line-height: 0.9;
+
     .greet{
-        color: rgb(255, 0, 0);
+        font-family:"Mrs Saint Delafield", cursive;
+        font-size: 100pt;
     }
     
     .name{
-        color: blue;
+        font-family: "Mea Culpa", cursive;
+        font-size: 300pt;
+        padding: 0 60pt;
     }
 }
 
 .menu-container{
 
+    padding: 20px;
+    background-color:var(--white-green);
+
+    .menu-border{
+        padding: 30px;
+        border: double 5px var(--hard-green);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .menu-item{
-        border: 5px black solid;
-    
-        img{
-            height: 200px;
+        width: 1000px;
+        display: flex;
+        align-items:center;
+
+        &:nth-of-type(even){
+            flex-direction:row;
+
+            .handle{
+                align-items:end;
+            }
         }
+
+        &:nth-of-type(odd){
+            flex-direction:row-reverse;
+
+            .handle{
+                align-items: start;
+            }
+        }
+
+
+
+    }
+
+    .handle{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .title{
+        font-family:"Mrs Saint Delafield", cursive;
+        font-size: 32pt;
+        line-height: 0;
+        padding-top: 0.7em;
+        padding-bottom: 0.2em;
+        border-bottom: 3px solid var(--light-green);
+        width: fit-content;
+    }
+
+    .description{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14pt;
+        font-weight: 500;
+    }
+
+    img{
+        height: 200px;
+        aspect-ratio: 1;
+    }
+
+    hr{
+        border-top: 1px solid var(--hard-green);
     }
 }
 
 .about-container{
-    
+    display: flex;
+
+    img{
+        max-height: 500px;
+    }
 }
 
 

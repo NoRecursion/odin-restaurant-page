@@ -1,6 +1,6 @@
 const greet = document.createElement("p");
 greet.classList.add("greet");
-greet.textContent = "Bienvenue Chez";
+greet.textContent = "Bienvenue chez";
 
 const name = document.createElement("p");
 name.classList.add("name");
