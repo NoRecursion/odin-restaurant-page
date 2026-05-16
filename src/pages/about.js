@@ -1,4 +1,4 @@
-import store_front from "./images/store_front.jpg"
+import canal from "./images/canal.jpg"
 
 function bel(type, cls, text){ //make a basic dom element
     const el = document.createElement(type);
@@ -21,11 +21,12 @@ const ellist = [
 ]
 
 const info = document.createElement("div");
+info.classList.add("info");
 info.replaceChildren(...ellist);
 
 
 const store_img = document.createElement("img");
-store_img.src = store_front;
+store_img.src = canal;
 
 const about_container = document.createElement("div");
 about_container.classList.add("about-container");

@@ -52,6 +52,7 @@ isolation: isolate;
     --white-green:#f4f9f2;
     --light-green:#bde5ba;
     --hard-green:#3a7b2e;
+    font-family: "Nunito", serif;
 }
 
 header{
@@ -71,16 +72,47 @@ button{
 
 
 body{
+    --fade-color:rgba(0, 0, 0, 0.5);
+
+    &:has(.home-container){
+        background: 
+            linear-gradient(var(--fade-color),var(--fade-color)),
+            url("./pages/images/night_entry.jpg");
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: cover;
+    }
+
+    &:has(.menu-container){
+        background: 
+            url("./pages/images/inside_photo.jpg");
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: cover;
+    }
+
+    &:has(.about-container){
+        background: 
+            url("./pages/images/double_window_tree.jpg");
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: cover;
+    }
+
+
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+
 }
 
 #content{
-    background-color: beige;
     flex: 1 1 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -89,22 +121,29 @@ body{
 }
 
 .home-container{
+    color: #fafbee;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-items: end;
 
-    line-height: 0.9;
+    line-height: 0.8;
 
     .greet{
         font-family:"Mrs Saint Delafield", cursive;
-        font-size: 100pt;
+        font-size: 150pt;
     }
     
     .name{
         font-family: "Mea Culpa", cursive;
-        font-size: 300pt;
-        padding: 0 60pt;
+        font-size: 370pt;
+        padding: 0 150pt;
     }
 }
 
@@ -180,10 +219,18 @@ body{
 }
 
 .about-container{
+    border-radius: 5px;
     display: flex;
+    gap: 40px;
+    padding: 30px;
+    font-size: 24pt;
+
+    .info{
+        width: 800px;
+    }
 
     img{
-        max-height: 500px;
+        max-height: 600px;
     }
 }
 
