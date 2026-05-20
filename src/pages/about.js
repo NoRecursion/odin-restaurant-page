@@ -1,5 +1,3 @@
-import canal from "./images/canal.jpg"
-
 function bel(type, cls, text){ //make a basic dom element
     const el = document.createElement(type);
     if(cls){
